@@ -67,12 +67,11 @@
         "essentials/navigation",
         "essentials/reusable-snippets",
         "sub pages": [
-          "essentials/markdown",
-          "essentials/code",
-          "essentials/images",
-          "essentials/settings",
-          "essentials/navigation",
-          "essentials/reusable-snippets"
+            "quickstart",
+            {
+                "group": "Nested Reference Pages",
+                "pages": ["nested-reference-page"]
+            }
         ]
       ]
     },
