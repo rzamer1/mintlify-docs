@@ -73,4 +73,63 @@ def run_assistant(message, chat_history=None):
         for call in tool_calls:
             print(f"Tool name: {call.name} | Parameters: {call.parameters}")
         print("="*50)
+def run_assistant(message, chat_history=None):
+    
+    if chat_history is None:
+        chat_history = []
+        
+    # Step 1: get user message
+    print(f"Question:\n{message}")
+    print("="*50)
+
+    # Step 2: Generate tool calls (if any)    
+    response = co.chat(
+        message=message,
+        model=model,
+        preamble=preamble,
+        tools=tools,
+        chat_history=chat_history
+    )
+
+    # Tool execution loop
+    while response.tool_calls:
+        tool_calls = response.tool_calls
+        
+        if response.text:
+            print("Intermediate response:")
+            print(response.text,"\n")
+        print("Tool calls:")
+        for call in tool_calls:
+            print(f"Tool name: {call.name} | Parameters: {call.parameters}")
+        print("="*50)
+
+def run_assistant(message, chat_history=None):
+    
+    if chat_history is None:
+        chat_history = []
+        
+    # Step 1: get user message
+    print(f"Question:\n{message}")
+    print("="*50)
+
+    # Step 2: Generate tool calls (if any)    
+    response = co.chat(
+        message=message,
+        model=model,
+        preamble=preamble,
+        tools=tools,
+        chat_history=chat_history
+    )
+
+    # Tool execution loop
+    while response.tool_calls:
+        tool_calls = response.tool_calls
+        
+        if response.text:
+            print("Intermediate response:")
+            print(response.text,"\n")
+        print("Tool calls:")
+        for call in tool_calls:
+            print(f"Tool name: {call.name} | Parameters: {call.parameters}")
+        print("="*50)
 ```
