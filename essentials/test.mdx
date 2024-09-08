@@ -1,0 +1,26 @@
+---
+title: 'New file'
+description: 'Description of your new file.'
+---
+
+import styles from './toc.module.css'
+
+# Table of Contents
+
+<div className={styles.tocContainer}>
+  {[
+    { number: 6, title: "Displaying Data with Props" },
+    { number: 7, title: "Adding Interactivity with State" },
+    { number: 8, title: "From React to Next.js" },
+    { number: 9, title: "Installing Next.js" },
+    { number: 10, title: "Server and Client Components" }
+  ].map(chapter => (
+    <div key={chapter.number} className={styles.chapterRow}>
+      <div className={styles.chapterNumber}>{chapter.number}</div>
+      <div className={styles.chapterTitle}>
+        <h3>Chapter {chapter.number}</h3>
+        <p>{chapter.title}</p>
+      </div>
+    </div>
+  ))}
+</div>
