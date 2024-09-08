@@ -66,14 +66,6 @@
         "essentials/settings",
         "essentials/navigation",
         "essentials/reusable-snippets",
-      //   "sub pages": [
-      //       "quickstart",
-      //       {
-      //           "group": "Nested Reference Pages",
-      //           "pages": ["nested-reference-page"]
-      //       }
-      //   ]
-      // ]
     },
     {
       "group": "API Documentation",
